@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Student Expense Tracker</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+
+<body>
+
+    <div class="dashboard">
+
+        <nav class="navbar">
+
+            <div class="brand">
+                💰 Student Expense Tracker
+            </div>
+
+            <a href="{{ url_for('logout') }}"
+               class="logout-button">
+
+                Logout
+
+            </a>
+
+        </nav>
+
+
+        <main class="dashboard-content">
+
+            <h1>
+                Hello, {{ student_name }}! 👋
+            </h1>
+
+            <p>
+                Welcome to your Student Expense Tracker.
+            </p>
+
+            <div class="welcome-card">
+
+                <h2>
+                    Your account
+                </h2>
+
+                <p>
+                    Email: {{ student_email }}
+                </p>
+
+                <p>
+                    You are successfully authenticated.
+                </p>
+
+            </div>
+
+
+            <div class="coming-soon">
+
+                <h2>
+                    Expense Tracker
+                </h2>
+
+                <p>
+                    Your expense tracking features will be added here.
+                </p>
+
+            </div>
+
+        </main>
+
+    </div>
+
+</body>
+
+</html>
